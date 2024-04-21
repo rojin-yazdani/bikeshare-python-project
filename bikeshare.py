@@ -143,7 +143,7 @@ def load_data(city, month, day):
     return df
 
 
-def time_stats(df, city, month, day):
+def travel_time_stats(df, city, month, day):
     """Displays statistics on the most frequent times of travel."""
 
     print(f'\nCalculating The Most Frequent Times of Travel in {city.title()} city.\n')
@@ -274,7 +274,7 @@ def main():
         df = load_data(city, month, day)
 
         # Displays statistics on the most frequent times of travel for filtered data.
-        time_stats(df, city, month, day)
+        travel_time_stats(df, city, month, day)
 
         # Displays statistics on the most popular stations and trip for filtered data.
         station_stats(df, city, month, day)
