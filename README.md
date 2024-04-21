@@ -5,7 +5,7 @@
 Bikeshare Statistics
 
 ### Description
-Describe what your project is about and what it does
+This project use some Bikeshare data of three cities (Chicago, New York, and Washington) and generate some statistics interactively with the user.
 
 ### Main Project File
 bikeshare.py
