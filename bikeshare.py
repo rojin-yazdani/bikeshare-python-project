@@ -29,9 +29,9 @@ def get_filters():
             inputCity = input('\nWould you like to see data from Chicago, New York, or Washington? ')
             if inputCity != "":
                 inputCity = inputCity.strip().lower()
-                if inputCity in ('chicago', 'new york', 'newyork',  'washington'):
+                if inputCity in ('chicago', 'new york', 'newyork',  'washington', 'new york city'):
                     city = inputCity
-                    if city in ('new york', 'newyork'):
+                    if city in ('new york', 'newyork', 'new york city'):
                         city = 'new york'
                 else:
                     print('\nThe input text wasn\'t one of the mentioned city names. \nPlease enter the name of the city.')
@@ -143,7 +143,7 @@ def load_data(city, month, day):
     return df
 
 
-def time_stats(df, city, month, day):
+def travel_time_stats(df, city, month, day):
     """Displays statistics on the most frequent times of travel."""
 
     print(f'\nCalculating The Most Frequent Times of Travel in {city.title()} city.\n')
@@ -274,7 +274,7 @@ def main():
         df = load_data(city, month, day)
 
         # Displays statistics on the most frequent times of travel for filtered data.
-        time_stats(df, city, month, day)
+        travel_time_stats(df, city, month, day)
 
         # Displays statistics on the most popular stations and trip for filtered data.
         station_stats(df, city, month, day)
