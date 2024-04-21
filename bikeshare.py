@@ -12,7 +12,8 @@ DAYS = { 1:'Sunday', 2:'Monday', 3:'Tuesday', 4:'Wednesday', 5:'Thursday', 6:'Fr
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asks user to specify a city, month, and day to analyze. 
+    The city selection is required, while the other items are optional.
 
     Returns:
         (str) city - name of the city to analyze
@@ -28,9 +29,9 @@ def get_filters():
             inputCity = input('\nWould you like to see data from Chicago, New York, or Washington? ')
             if inputCity != "":
                 inputCity = inputCity.strip().lower()
-                if inputCity in ('chicago', 'new york', 'newyork',  'washington'):
+                if inputCity in ('chicago', 'new york', 'newyork',  'washington', 'new york city'):
                     city = inputCity
-                    if city in ('new york', 'newyork'):
+                    if city in ('new york', 'newyork', 'new york city'):
                         city = 'new york'
                 else:
                     print('\nThe input text wasn\'t one of the mentioned city names. \nPlease enter the name of the city.')
